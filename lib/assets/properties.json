@@ -1,0 +1,259 @@
+[
+    {
+      "id": 1,
+      "address": {
+        "street": "1247 Elm Street",
+        "city": "Cincinnati",
+        "state": "OH",
+        "zipCode": "45202",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 39.1031,
+        "longitude": -84.5120
+      },
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1200,
+      "arv": 145000,
+      "status": "High",
+      "score": 6.8,
+      "classification": "Residential",
+      "lastSalePrice": 85000,
+      "lastSaleDate": "2018-03-15",
+      "seller": {
+        "id": 101,
+        "name": "Robert Johnson",
+        "email": "robert@example.com",
+        "phones": ["+1-555-1234"]
+      }
+    },
+    {
+      "id": 2,
+      "address": {
+        "street": "892 Oak Avenue",
+        "city": "Dayton",
+        "state": "OH",
+        "zipCode": "45423",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 39.7589,
+        "longitude": -84.1916
+      },
+      "beds": 2,
+      "baths": 1,
+      "sqft": 950,
+      "arv": 125000,
+      "status": "Medium",
+      "score": 6.5,
+      "classification": "Residential",
+      "lastSalePrice": 65000,
+      "lastSaleDate": "2015-07-22",
+      "revealed": true,
+      "sellerNotes": "This is a note about the property",
+      "exclusive": false,
+      "exclusiveTime": "",
+      "seller": {
+        "id": 102,
+        "name": "Maria Rodriguez",
+        "email": "maria@example.com",
+        "phones": ["+1-555-5678", "+1-555-9876"]
+      }
+    },
+    {
+      "id": 3,
+      "address": {
+        "street": "543 Maple Drive",
+        "city": "Columbus",
+        "state": "OH",
+        "zipCode": "43215",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 39.9612,
+        "longitude": -82.9988
+      },
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1650,
+      "arv": 195000,
+      "status": "High",
+      "score": 7.8,
+      "classification": "Industrial",
+      "lastSalePrice": 120000,
+      "lastSaleDate": "2019-11-08",
+      "exclusive": true,
+      "exclusiveTime": "02:08:05",
+      "seller": {
+        "id": 103,
+        "name": "David Chen",
+        "email": "david@example.com",
+        "phones": ["+1-555-3333","+1-444-6666"]
+      }
+    },
+    {
+      "id": 4,
+      "address": {
+        "street": "789 Pine Street",
+        "city": "Springfield",
+        "state": "OH",
+        "zipCode": "45505",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 39.9242,
+        "longitude": -83.8088
+      },
+      "beds": 2,
+      "baths": 2,
+      "sqft": 800,
+      "arv": 95000,
+      "status": "Low",
+      "score": 7.3,
+      "classification": "Commercial",
+      "lastSalePrice": 45000,
+      "lastSaleDate": "2016-01-17",
+      "sellerNotes": "This is a note about the property",
+      "exclusive": false,
+      "exclusiveTime": "",
+      "revealed": true,
+      "seller": {
+        "id": 104,
+        "name": "Jennifer Williams",
+        "email": "jennifer@example.com",
+        "phones": ["+1-555-1122"]
+      }
+    },
+    {
+      "id": 5,
+      "address": {
+        "street": "321 Cedar Lane",
+        "city": "Toledo",
+        "state": "OH",
+        "zipCode": "43604",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 41.6639,
+        "longitude": -83.5552
+      },
+      "beds": 3,
+      "baths": 1,
+      "sqft": 1400,
+      "arv": 135000,
+      "status": "High",
+      "score": 7.1,
+      "classification": "Agricultural",
+      "sellerNotes": "This is a note about the property",
+      "lastSalePrice": 75000,
+      "lastSaleDate": "2017-05-30",
+      "exclusive": false,
+      "exclusiveTime": "",
+      "seller": {
+        "id": 105,
+        "name": "Michael Thompson",
+        "email": "michael@example.com",
+        "phones": ["+1-555-7788", "+1-555-8899"]
+      }
+    },
+    {
+      "id": 6,
+      "address": {
+        "street": "214 Birch Blvd",
+        "city": "Akron",
+        "state": "OH",
+        "zipCode": "44303",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 41.0814,
+        "longitude": -81.5190
+      },
+      "beds": 2,
+      "baths": 1,
+      "sqft": 1100,
+      "arv": 98000,
+      "status": "Low",
+      "score": 6.9,
+      "revealCount": 30,      
+      "sellerNotes": "This is a note about the property",
+      "classification": "Agricultural",
+      "lastSalePrice": 62000,
+      "lastSaleDate": "2020-06-12",
+      "exclusive": false,
+      "exclusiveTime": "",
+      "seller": {
+        "id": 106,
+        "name": "Alicia Green",
+        "email": "alicia@example.com",
+        "phones": ["+1-555-2233"]
+      }
+    },
+    {
+      "id": 7,
+      "address": {
+        "street": "180 Willow Way",
+        "city": "Cleveland",
+        "state": "OH",
+        "zipCode": "44114",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 41.4993,
+        "longitude": -81.6944
+      },
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2100,
+      "arv": 210000,
+      "status": "Medium",
+      "score": 8.7,
+      "classification": "Commercial",
+      "lastSalePrice": 130000,
+      "lastSaleDate": "2019-03-25",
+      "exclusive": false,
+      "sellerNotes": "This is a note about the property",
+      "exclusiveTime": "",
+      "seller": {
+        "id": 107,
+        "name": "Brian Wilson",
+        "email": "brian@example.com",
+        "phones": ["+1-555-3344"]
+      }
+    },
+    {
+      "id": 8,
+      "address": {
+        "street": "999 Aspen Ave",
+        "city": "Youngstown",
+        "state": "OH",
+        "zipCode": "44512",
+        "country": "USA"
+      },
+      "location": {
+        "latitude": 41.0998,
+        "longitude": -80.6495
+      },
+      "beds": 3,
+      "baths": 24114,
+
+      "sqft": 1550,
+      "arv": 175000,
+      "status": "High",
+      "score": 8.2,
+      "classification": "Commercial",
+      "lastSalePrice": 95000,
+      "lastSaleDate": "2021-08-05",
+      "exclusive": false,
+      "exclusiveTime": "",
+      "sellerNotes": "This is a note about the property",
+      "seller": {
+        "id": 108,
+        "name": "Tina Brown",
+        "email": "tina@example.com",
+        "phones": ["+1-555-4455", "+1-555-5566"]
+      }
+    }
+  ]
+  
