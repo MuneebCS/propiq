@@ -77,19 +77,31 @@ class RevealedPropertyCard extends StatelessWidget {
   }
 
   Widget _infoGrid() {
-    return Wrap(
-      runSpacing: 16,
-      spacing: 30,
-      children: [
-        _infoBox('🛏️ Beds', '${property.beds}'),
-        _infoBox('🛁 Baths', '${property.baths}'),
-        _infoBox('📐 Area', '${property.sqft} sqft'),
-        _infoBox('💸 Last Sale', '\$${_formatNumber(property.lastSalePrice)}'),
-        _infoBox('📅 Sale Date', _formatDate(property.lastSaleDate)),
-        _infoBox('📈 ARV', '\$${_formatNumber(property.arv)}'),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // Decide number of columns based on available width
+        int columns = (constraints.maxWidth / 160).floor().clamp(2, 3); // Min 2, max 3 columns
+
+        return GridView.count(
+          crossAxisCount: columns,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 16,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          childAspectRatio: 2.2, // Adjust as needed
+          children: [
+            _infoBox('🛏️ Beds', '${property.beds}'),
+            _infoBox('🛁 Baths', '${property.baths}'),
+            _infoBox('📐 Area', '${property.sqft} sqft'),
+            _infoBox('💸 Last Sale', '\$${_formatNumber(property.lastSalePrice)}'),
+            _infoBox('📅 Sale Date', _formatDate(property.lastSaleDate)),
+            _infoBox('📈 ARV', '\$${_formatNumber(property.arv)}'),
+          ],
+        );
+      },
     );
   }
+
 
   Widget _infoBox(String label, String value) {
     return SizedBox(

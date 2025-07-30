@@ -72,32 +72,47 @@ class ExclusivePropertyCard extends StatelessWidget {
             "EXCLUSIVE",
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              fontSize: 10, // reduced font size
               color: Colors.white,
             ),
           ),
+          padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 0), // tighter padding
+          materialTapTargetSize: MaterialTapTargetSize.shrinkWrap, // reduces size further
           backgroundColor: Colors.deepPurple,
-        ),
+        )
+
       ],
     );
   }
 
   Widget _infoGrid() {
-    return Wrap(
-      runSpacing: 16,
-      spacing: 30,
-      children: [
-        _infoBox('🛏️ Beds', '${property.beds}'),
-        _infoBox('🛁 Baths', '${property.baths}'),
-        _infoBox('📐 Sqft', '${property.sqft}'),
-        _infoBox('💸 ARV', '\$${_formatNumber(property.arv)}'),
-        _infoBox('📅 Sale Date', _formatDate(property.lastSaleDate)),
-        _infoBox('🏷️ Last Sale', '\$${_formatNumber(property.lastSalePrice)}'),
-        _infoBox('📊 Score', '${property.score}'),
-        _infoBox('🏷️ Classification', property.classification),
-        _infoBox('🔄 Status', property.status),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        int columns = (constraints.maxWidth / 160).floor().clamp(2, 4);
+
+        return GridView.count(
+          crossAxisCount: columns,
+          crossAxisSpacing: 5,
+          mainAxisSpacing: 6,
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          childAspectRatio: 2,
+          children: [
+            _infoBox('🛏️ Beds', '${property.beds}'),
+            _infoBox('🛁 Baths', '${property.baths}'),
+            _infoBox('📐 Sqft', '${property.sqft}'),
+            _infoBox('💸 ARV', '\$${_formatNumber(property.arv)}'),
+            _infoBox('📅 Sale Date', _formatDate(property.lastSaleDate)),
+            _infoBox('🏷️ Last Sale', '\$${_formatNumber(property.lastSalePrice)}'),
+            _infoBox('📊 Score', '${property.score}'),
+            _infoBox('🏷️ Classification', property.classification),
+            _infoBox('🔄 Status', property.status),
+          ],
+        );
+      },
     );
   }
+
 
   Widget _infoBox(String label, String value) {
     return SizedBox(
