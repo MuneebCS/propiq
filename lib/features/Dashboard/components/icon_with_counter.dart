@@ -25,7 +25,7 @@ class IconButtonWithCount extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           boxShadow: [
             BoxShadow(
-              color: CustomColors.secondary.withOpacity(0.2),
+              color: CustomColors.secondary.withAlpha((0.2 * 255).toInt()),
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),

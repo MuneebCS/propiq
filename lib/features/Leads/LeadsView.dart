@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../core/AppTheme/AppColors.dart';
-import '../../../core/utils/device_utils.dart';
 import '../../Models/Properties/Properties.dart';
 import '../../core/shared/revealed_leads.dart';
-import '../../services/properties_search.dart';
 import '../../widgets/AppTextField.dart';
 import '../../widgets/AppButton.dart';
-import '../Maps/components/FilterBottomSheet.dart';
 import 'components/LeadCard.dart';
 
 class LeadsView extends StatefulWidget {

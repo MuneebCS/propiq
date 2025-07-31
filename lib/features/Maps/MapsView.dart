@@ -4,7 +4,6 @@ import '../../core/AppTheme/AppColors.dart';
 import '../../core/shared/revealed_leads.dart';
 import '../../services/properties_search.dart';
 import '../../widgets/AppTextField.dart';
-import '../Leads/components/LeadCard.dart';
 import 'components/FilterBottomSheet.dart';
 import 'components/MapSectionView.dart';
 import 'components/PropertyCard/DetailedPropertyCard.dart';
@@ -77,7 +76,6 @@ class _MapSearchViewState extends State<MapsView> {
 
   @override
   Widget build(BuildContext context) {
-    final bool hasProperties = _filteredProperties.isNotEmpty || _allProperties.isNotEmpty;
     final Property? firstProperty = _filteredProperties.isNotEmpty
         ? _filteredProperties.first
         : _allProperties.isNotEmpty

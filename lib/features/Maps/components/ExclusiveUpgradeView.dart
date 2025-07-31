@@ -10,7 +10,6 @@ class ExclusiveDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final primary = theme.colorScheme.primary;
     final secondary = theme.colorScheme.secondary;
 
     return Dialog(
@@ -170,7 +169,6 @@ class ExclusiveDialog extends StatelessWidget {
     required VoidCallback onTap,
   }) {
     final theme = Theme.of(context);
-    final primary = theme.colorScheme.primary;
     final secondary = theme.colorScheme.secondary;
 
     return Card(

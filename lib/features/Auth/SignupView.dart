@@ -219,21 +219,3 @@ class _SignupViewState extends State<SignupView> {
   }
 }
 
-class _PasswordRule extends StatelessWidget {
-  final String text;
-  const _PasswordRule({required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 4),
-      child: Text(
-        text,
-        style: const TextStyle(
-          fontSize: 13,
-          color: Colors.black87,
-        ),
-      ),
-    );
-  }
-}

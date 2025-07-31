@@ -24,7 +24,7 @@ class RevealedPropertyCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Card(
-          color: CustomColors.secondary.withOpacity(0.1),
+          color: CustomColors.secondary.withAlpha((0.3 * 255).toInt()),
           elevation: 10,
           shadowColor: Colors.white24,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),

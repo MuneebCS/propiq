@@ -33,14 +33,14 @@ class PricingCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              CustomColors.primary.withOpacity(0.95),
-              CustomColors.primary.withOpacity(0.85),
+              CustomColors.primary.withAlpha((0.9 * 255).toInt()),
+              CustomColors.primary.withAlpha((0.9 * 255).toInt()),
             ],
           ),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withAlpha((0.1 * 255).toInt()),
               blurRadius: 20,
               spreadRadius: 2,
             ),
@@ -86,7 +86,7 @@ class PricingCard extends StatelessWidget {
                         horizontal: 16,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.2),
+                        color: Colors.white.withAlpha((0.2 * 255).toInt()),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Column(

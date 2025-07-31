@@ -93,16 +93,6 @@ class _LeadEngagementFeedbackState extends State<LeadEngagementFeedback> {
     );
   }
 
-
-  void _showSnackBar() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        backgroundColor: CustomColors.secondary,
-        content: const Text('Please review if the numbers are correct'),
-        duration: const Duration(seconds: 1),
-      ),
-    );
-  }
 }
 
 

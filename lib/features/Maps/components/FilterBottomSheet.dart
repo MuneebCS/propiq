@@ -198,7 +198,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
           labelText: label,
           labelStyle: const TextStyle(color: Colors.black),
           filled: true,
-          fillColor: CustomColors.primary.withOpacity(0.1),
+          fillColor: CustomColors.primary.withAlpha((0.1 * 255).toInt()),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
@@ -247,7 +247,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
     return Container(
       height: 48,
       decoration: BoxDecoration(
-        color: CustomColors.primary.withOpacity(0.1),
+        color: CustomColors.primary.withAlpha((0.1 * 255).toInt()),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: CustomColors.secondary),
       ),

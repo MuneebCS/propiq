@@ -75,7 +75,7 @@ class _AddRevealsViewState extends State<AddRevealsView> {
                       width: 120,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       decoration: BoxDecoration(
-                        color: isSelected ? CustomColors.secondary.withOpacity(0.12) : Colors.white,
+                        color: isSelected ? CustomColors.secondary.withAlpha((0.2 * 255).toInt()) : Colors.white,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           color: isSelected ? CustomColors.secondary : Colors.grey.shade300,

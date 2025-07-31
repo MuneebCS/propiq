@@ -87,7 +87,7 @@ class _PaymentsCoordinatorViewState extends State<PaymentsCoordinatorView> {
                     fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
                     color: isSelected
                         ? CustomColors.secondary
-                        : Colors.black.withOpacity(0.6),
+                        : Colors.black.withAlpha((0.6 * 255).toInt()),
                   ),
                 ),
                 const SizedBox(height: 6),
