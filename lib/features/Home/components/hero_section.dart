@@ -85,7 +85,7 @@ class HeroSection extends StatelessWidget {
 
           // 🔹 Text and CTA
           Positioned(
-            bottom: 200,
+            bottom: 150,
             left: 24,
             right: 24,
             child: Column(

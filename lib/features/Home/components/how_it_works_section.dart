@@ -45,7 +45,7 @@ class HowItWorksSection extends StatelessWidget {
           ),
           const SizedBox(height: 32),
 
-          AppButton(text:  '✅ Try it now—your first 3 leads are free',     onPressed: () {
+          AppButton(text:  'Try it now—your first 3 leads are free',     onPressed: () {
             Navigator.pushNamed(context, '/pricing'); // <-- make sure route is defined
           },)
         ],
