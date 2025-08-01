@@ -38,27 +38,31 @@ class _LeadsViewState extends State<LeadsView> {
     });
   }
 
-
   List<Property> get filteredLeads {
+    final searchText = _addressController.text.trim().toLowerCase();
     return allLeads.where((lead) {
-      final searchText = _addressController.text.toLowerCase();
-
-      final addressMatch =
-          lead.address.street.toLowerCase().contains(searchText) ||
-              lead.address.city.toLowerCase().contains(searchText) ||
-              lead.address.state.toLowerCase().contains(searchText);
-
-      final scoreMatch = double.tryParse(searchText) != null
-          ? lead.score.toStringAsFixed(1) == double.parse(searchText).toStringAsFixed(1)
-          : true;
-
       final zipMatch = _zipCodeController.text.isEmpty ||
           lead.address.zipCode.contains(_zipCodeController.text);
 
       final countryMatch = selectedCountry == 'All Countries' ||
-          lead.address.country == selectedCountry;
+          lead.address.country.toLowerCase() == selectedCountry.toLowerCase();
+      bool searchMatch = true;
 
-      return (addressMatch || scoreMatch) && zipMatch && countryMatch;
+      if (searchText.isNotEmpty) {
+        final searchableString = [
+          lead.address.street,
+          lead.address.city,
+          lead.address.state,
+          lead.address.zipCode,
+          lead.address.country,
+          lead.seller.name,
+        ].join(' ').toLowerCase();
+        final searchTerms = searchText.split(' ');
+        searchMatch = searchTerms.every((term) =>
+            searchableString.contains(term));
+      }
+
+      return searchMatch && zipMatch && countryMatch;
     }).toList()
       ..sort((a, b) {
         if (selectedSort == 'Score (High to Low)') {
